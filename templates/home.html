@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form id='form1' method="POST">
+        {% csrf_token %}
+        <select id='select_type' name='select_type'>
+            <option id='select'>select</option>
+            <option id='Song'>Song</option>
+            <option id='Podcast'>Podcast</option>
+            <option id='AudioBook'>AudioBook</option>
+            
+        </select>
+        <input type="submit" value="submit">
+    </form>
+    <!--  In this div we print our tables -->
+        <div id="dvTable">
+         
+        {% if "Song" in hai %}
+            <h1>Song</h1>
+
+            <table border="1px solid black">
+                <tr>
+                    <td>Serial No</td>
+                    <td>content</td>
+                    <td>Input</td>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>ID</td>
+                    <td><Input type="text"></td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Name of the song</td>
+                    <td><Input type="text"></td>
+                </tr>
+
+                
+                <tr>
+                    <td>3</td>
+                    <td>Duration (Seconds)</td>
+                    <td><Input type="number"></td>
+                </tr>
+                
+                <tr>
+                    <td>4</td>
+                    <td>Uploaded time</td>
+                    <td><Input type="datetime-local"></td>
+                </tr>
+
+            </table>
+
+
+
+
+
+        {% elif 'Podcast' in hai %}
+        <table border="1px solid black">
+            <tr>
+                <td>Serial No</td>
+                <td>content</td>
+                <td>Input</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>ID</td>
+                <td><Input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Name of the Podcast</td>
+                <td><Input type="text"></td>
+            </tr>
+
+            
+            <tr>
+                <td>3</td>
+                <td>Duration (Seconds)</td>
+                <td><Input type="number"></td>
+            </tr>
+            
+            <tr>
+                <td>4</td>
+                <td>Uploaded time</td>
+                <td><Input type="datetime-local"></td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>Host</td>
+                <td><Input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Participants</td>
+                <td><Input type="number"></td>
+            </tr>
+
+        </table>    
+
+        {% elif 'AudioBook' in hai %}
+        
+        <table  border="1px solid black">
+            <tr>
+                <td>Serial No</td>
+                <td>content</td>
+                <td>Input</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>ID</td>
+                <td><Input type="number"></td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Title of the AudioBook</td>
+                <td><Input type="text"></td>
+            </tr>
+
+            
+            <tr>
+                <td>3</td>
+                <td>Author</td>
+                <td><Input type="text"></td>
+            </tr>
+            
+            <tr>
+                <td>4</td>
+                <td>Narrator</td>
+                <td><Input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>Duration(Seconds)</td>
+                <td><Input type="number"></td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Updated time</td>
+                <td><Input type="datetime-local"></td>
+            </tr>
+
+        </table> 
+
+        {% endif %}
+        </div>
+
+
+
+
+    
+</body>
+</html>
